@@ -7,16 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Exercício 2</h1>
-    <form method="post" action="exer2resposta.php">
+    <h1>Exercício 9</h1>
+    <form method="post" action="exer9resposta.php">
                         <div class="mb-3">
-                            <label for="Valor1" class="form-label">Informe o primeiro númro</label>
+                            <label for="Valor1" class="form-label">Informe o raio do círculo</label>
                             <input type="number" id="Valor1" name="Valor1" class="form-control">
-                        </div>
-                    
-                        <div class="mb-3">
-                            <label for="Valor2" class="form-label">Informe segundo número</label>
-                            <input type="number" id="Valor2" name="Valor2" class="form-control">
                         </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
