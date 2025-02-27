@@ -12,8 +12,9 @@
     try{
         $valor1 = $_POST['Valor1'];
         $valor2 = $_POST['Valor2'];
-        $desc = $valor1 - ($valor1*$valor2*0.01);
-        echo "O valor com o desconto é $desc";
+        $valor3 = $_POST['Valor3'];
+        $jus = $valor1 - ($valor1*((1+$valor2*0.01)**$valor3));
+        echo "O valor do juros composto é $jus";
 
     }catch (Exception $e){
             echo $e->getMessage();
