@@ -13,21 +13,20 @@
     if ($_SERVER['REQUEST_METHOD']=='POST'){
       try{
           $valor1 = $_POST['Valor1'];
-          $valor2 = $_POST['Valor2'];
 
-          if ($valor1 == $valor2){
-          $somatripli= ($valor1 + $valor2)*3;
-        echo("O valor da soma triplicada é: $somatripli ");
-          }
-          else{
-          $soma = ($valor1 + $valor2);
-          echo("O valor da soma triplicada é: $soma ");
-          }
-    }catch (Exception $e){
-      echo $e->getMessage();
-  }
-}
 
+          if ($valor1 > 100){
+            $desconto = $valor1-($valor1 * 0.15);
+            echo "Valor com desconto: $desconto";
+          }
+          else {
+          echo "Valor inferior a 100: $valor1";
+        }
+  
+      }catch (Exception $e){
+              echo $e->getMessage();
+          }
+      }
 
 ?>
 

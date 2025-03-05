@@ -15,19 +15,22 @@
           $valor1 = $_POST['Valor1'];
           $valor2 = $_POST['Valor2'];
 
-          if ($valor1 == $valor2){
-          $somatripli= ($valor1 + $valor2)*3;
-        echo("O valor da soma triplicada é: $somatripli ");
-          }
-          else{
-          $soma = ($valor1 + $valor2);
-          echo("O valor da soma triplicada é: $soma ");
-          }
-    }catch (Exception $e){
-      echo $e->getMessage();
-  }
-}
 
+          if ($valor1 == $valor2){
+            echo "Valores Iguais";
+          }
+          else {
+          $valores = [$valor1, $valor2];
+
+          $menorValor = min($valores);
+          $maiorValor = max($valores);
+          echo "Orden crescente: $menorValor $maiorValor";          
+        }
+  
+      }catch (Exception $e){
+              echo $e->getMessage();
+          }
+      }
 
 ?>
 

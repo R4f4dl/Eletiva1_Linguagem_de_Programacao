@@ -7,29 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-<?php
+    <h1>Exercício 5</h1>
+    <form method="post" action="exer5resposta.php">
+                        <div class="mb-3">
+                            <label for="Valor1" class="form-label"> Informe o número do mês</label>
+                            <input type="number" id="Valor1" name="Valor1" class="form-control">
+                        </div>
 
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
 
-    if ($_SERVER['REQUEST_METHOD']=='POST'){
-      try{
-          $valor1 = $_POST['Valor1'];
-          $valor2 = $_POST['Valor2'];
-
-          if ($valor1 == $valor2){
-          $somatripli= ($valor1 + $valor2)*3;
-        echo("O valor da soma triplicada é: $somatripli ");
-          }
-          else{
-          $soma = ($valor1 + $valor2);
-          echo("O valor da soma triplicada é: $soma ");
-          }
-    }catch (Exception $e){
-      echo $e->getMessage();
-  }
-}
-
-
-?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
