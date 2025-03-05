@@ -8,17 +8,38 @@
   </head>
   <body>
 <?php
-    if ($_SERVER['REQUEST_METHOD']=='POST'){
-    try{
-        $valor1 = $_POST['Valor1'];
-        $valor2 = $_POST['Valor2'];
-        $soma = $valor1 + $valor2;
-        echo "O valor da soma é $soma";
 
-    }catch (Exception $e){
-            echo $e->getMessage();
-        }
-    }
+
+
+    if ($_SERVER['REQUEST_METHOD']=='POST'){
+      try{
+          $valor1 = $_POST['Valor1'];
+          $valor2 = $_POST['Valor2'];
+          $valor3 = $_POST['Valor3'];
+          $valor4 = $_POST['Valor4'];
+          $valor5 = $_POST['Valor5'];
+          $valor6 = $_POST['Valor6'];
+          $valor7 = $_POST['Valor7'];
+
+          $valores = [$valor1, $valor2, $valor3, $valor4, $valor5, $valor6, $valor7];
+
+          $menorValor = min($valores);
+          $posicao = array_search($menorValor, $valores) + 1;
+
+
+          echo "O menor valor é: $menorValor";
+
+          echo "A posição do menor valor é: $posicao";
+  
+      }catch (Exception $e){
+              echo $e->getMessage();
+          }
+      }
+
+
+
+
+
 ?>
 
 
