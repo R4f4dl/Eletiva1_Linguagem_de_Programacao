@@ -12,7 +12,7 @@
     try{
         $valor1 = $_POST['Valor1'];
         $arr = round($valor1);
-        echo "O valor é $arr";
+        echo "O valor arredondado é $arr";
 
     }catch (Exception $e){
             echo $e->getMessage();
