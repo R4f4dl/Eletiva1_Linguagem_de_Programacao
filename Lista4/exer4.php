@@ -19,7 +19,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="Valor1" class="form-label"> Escreva o ano:</label>
-                            <input type="int" id="Valor3" name="Valor2" class="form-control">
+                            <input type="int" id="Valor3" name="Valor3" class="form-control">
                         </div>
 
 

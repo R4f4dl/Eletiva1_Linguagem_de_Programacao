@@ -13,18 +13,30 @@
     if ($_SERVER['REQUEST_METHOD']=='POST'){
       try{
           $dia = $_POST['Valor1'];
-          $mês = $_POST['Valor2'];
-          $ano = $_POST['Valor2'];
+          $mes = $_POST['Valor2'];
+          $ano = $_POST['Valor3'];
+
+          if ($dia > 31){
+            echo "Dia invalido.<br>";
+          }
+
+          elseif($mes > 12){
+            echo "Mês invalido.<br>";
+          }
+
+          elseif($ano > 9999){
+            echo "Ano inválido.<br>";
+          }
+
 
           if ($dia <= 31){
-            echo "Dia valido.";
-              if($mês)
-        } 
+                if($mes <= 12){
+                        if($ano <= 9999){
+                          echo "<br>$dia/$mes/$ano";
+                        }
+                }
+          }
 
-
-        else {
-            echo "Dia invalido";
-        }
 
       }catch (Exception $e){
               echo $e->getMessage();
