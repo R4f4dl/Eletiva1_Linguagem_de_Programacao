@@ -9,8 +9,7 @@
   <body>
 <?php
 
-
-    if ($_SERVER['REQUEST_METHOD']=='POST'){
+if ($_SERVER['REQUEST_METHOD']=='POST'){
       try{
           $dia = $_POST['Valor1'];
           $mes = $_POST['Valor2'];
