@@ -12,11 +12,14 @@
 
     if ($_SERVER['REQUEST_METHOD']=='POST'){
       try{
-          $texto = $_POST['Valor1'];
+          $texto1 = $_POST['Valor1'];
+          $texto2 = $_POST['Valor2'];
 
-        echo "<h1>". strlen($texto).  "</h1>";
-
-
+          if (strpos($texto1, $texto2) !== false) {
+            echo "A palavra '$texto2' está contida na frase '$texto1'.";
+        } else {
+            echo "A palavra '$texto2' NÃO está contida na frase '$texto2'.";
+        }
 
       }catch (Exception $e){
               echo $e->getMessage();

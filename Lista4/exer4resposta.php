@@ -12,11 +12,19 @@
 
     if ($_SERVER['REQUEST_METHOD']=='POST'){
       try{
-          $texto = $_POST['Valor1'];
+          $dia = $_POST['Valor1'];
+          $mês = $_POST['Valor2'];
+          $ano = $_POST['Valor2'];
 
-        echo "<h1>". strlen($texto).  "</h1>";
+          if ($dia <= 31){
+            echo "Dia valido.";
+              if($mês)
+        } 
 
 
+        else {
+            echo "Dia invalido";
+        }
 
       }catch (Exception $e){
               echo $e->getMessage();

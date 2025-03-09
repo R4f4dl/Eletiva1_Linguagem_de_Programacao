@@ -14,7 +14,9 @@
       try{
           $texto = $_POST['Valor1'];
 
-        echo "<h1>". strlen($texto).  "</h1>";
+          $maiusculo = strtoupper($texto);
+
+        echo "<h1> $maiusculo </h1>";
 
 
 
