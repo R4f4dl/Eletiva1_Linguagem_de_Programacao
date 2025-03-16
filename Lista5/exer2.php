@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 1</title>
+    <title>Exercício 2</title>
 </head>
 <body>
     <form action="" method="POST">
         <?php for($i=0;$i<5;$i++): ?> 
             <input type="text" name="nome[]" placeholder="Nome"/>
-            <input type="number" name="n1[]" placeholder="Nota 1:"/>
-            <input type="number" name="n2[]" placeholder="Nota 2:"/>
-            <input type="number" name="n3[]" placeholder="Nota 3:"/>
+            <input type="number" step="0.01" name="n1[]" placeholder="Nota 1:"/>
+            <input type="number" step="0.01" name="n2[]" placeholder="Nota 2:"/>
+            <input type="number" step="0.01" name="n3[]" placeholder="Nota 3:"/>
             <p> </p>
         <?php endfor; ?>
         <p></p>
@@ -37,7 +37,7 @@
                     $aluno[$chavenome] = $media;
                 }
 
-                arsort($aluno); //Serve para organizar em ordem alfabetica
+                arsort($aluno); //Serve para organizar em ordem decrescente
                 foreach ($aluno as $nome => $media) {
                     echo "Nome: $nome - Média: $media<br>";
                 }
